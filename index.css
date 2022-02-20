@@ -1,0 +1,294 @@
+/* THE BELOW SECTION IS INJECTED WHEN THE SCREEN SIZE IS MORE THAN 768PX OR MD SIZE */
+
+* {
+    overflow-x: visible;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* SCROLL ANIMATIONS */
+
+
+/* TRANSLATING LEFT */
+
+.TransX_Left {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.TransX_Left.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* TRANSLATING UP */
+
+.TransY_Up {
+    position: relative;
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.TransY_Up.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* TRANSLATING RIGHTS */
+
+.TransX_Right {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.TransX_Right.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* CONTAINER CONTAINING TOPBAR TAGLINE NAVBAR AND COMPANY NAME */
+
+
+/* TAGLINE BAR */
+
+.top_container {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(20, 62, 252, 0.479), rgba(65, 62, 62, 0)), url('bg.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+}
+
+.tag_bar p {
+    display: inline-flex;
+}
+
+
+/* COMPANY NAME */
+
+.comp_name {
+    font-size: 10em;
+    font-weight: bolder;
+    margin-top: 0.5em;
+    background-color: white;
+    mix-blend-mode: screen;
+    margin-left: 30%;
+    border-radius: 10px;
+}
+
+#navbar {
+    margin: 0px -16px;
+    transition: all 0.5s;
+}
+
+
+/* STICK TO TP CLASS FOR NAVBAR */
+
+.sticky {
+    width: 98%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(15, 15, 15, 0.87);
+    transform: scale(1.1);
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+#specialization img {
+    height: 35em;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* TESTIMONIALS */
+
+#testimonials {
+    height: 50em;
+    width: 50%;
+    z-index: -1;
+    right: 0;
+    background-image: linear-gradient(to top, rgb(255, 148, 48, 0.8), rgba(255, 148, 48, 0.8)), url('test.jpeg');
+    background-position: center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    padding-top: 20%;
+    margin-top: -20em;
+}
+
+
+/* WE FOCUS ON */
+
+.box {
+    position: absolute;
+    z-index: 1;
+    width: 20%;
+    height: 40em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1.5s ease;
+}
+
+.box:hover {
+    z-index: 2;
+    width: 100%;
+}
+
+.b2:hover {
+    transform: translateX(-20%);
+}
+
+.b3:hover {
+    transform: translateX(-40%);
+}
+
+.b4:hover {
+    transform: translateX(-60%);
+}
+
+.b5:hover {
+    transform: translateX(-80%);
+}
+
+
+/* SLIDESHOW */
+
+.mySlides {
+    display: none;
+    height: 35em;
+}
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.social a {
+    text-decoration: none;
+    color: red;
+}
+
+.social a:hover {
+    color: rgb(255, 153, 0);
+}
+
+#side_nav {
+    height: 100vh;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.836);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    transition: all 0.5s;
+}
+
+#side_nav a {
+    text-decoration: none;
+    color: rgb(255, 189, 65);
+    transition: all 0.2s;
+}
+
+#side_nav a:hover {
+    color: rgb(255, 251, 0);
+    background-color: rgb(126, 128, 127);
+}
+
+
+/* THE BELOW SECTION IS INJECTED WHEN THE SCREEN SIZE IS LESS THAN 1450PX OR MD SIZE */
+
+@media only screen and (max-width:1450px) {
+    /* CONTAINER CONTAINING TOPBAR TAGLINE NAVBAR AND COMPANY NAME */
+    .top_container {
+        height: 100vh;
+    }
+    .comp_name {
+        font-size: 7em;
+        font-weight: bolder;
+        margin-top: 3em;
+        margin-left: 10%;
+    }
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    #specialization img {
+        height: 35em;
+    }
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    #advantages_testimonials {
+        display: none;
+    }
+}
+
+
+/* THE BELOW SECTION IS INJECTED WHEN THE SCREEN SIZE IS LESS THAN 500PX OR MD SIZE */
+
+@media only screen and (max-width:500px) {
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    /* CONTAINER CONTAINING TOPBAR TAGLINE NAVBAR AND COMPANY NAME */
+    .top_container {
+        height: 80vh;
+        background-image: linear-gradient(to bottom, rgba(81, 112, 252, 0.479), rgba(65, 62, 62, 0)), url('bg.jpg');
+        background-position: center bottom;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .comp_name {
+        font-size: 4em;
+        font-weight: bolder;
+        margin-top: 2em;
+    }
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    #specialization img {
+        height: 35em;
+        width: 90%;
+    }
+    /* ----------------------------------------------------------------------------------------------------------------------------------------- */
+    #advantages_testimonials {
+        display: none;
+    }
+    .box1 {
+        height: 9em;
+        overflow: hidden;
+    }
+    .mySlides {
+        height: 15em;
+    }
+}
